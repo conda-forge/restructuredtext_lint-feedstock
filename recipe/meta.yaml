@@ -31,7 +31,6 @@ test:
 about:
   home: https://github.com/twolfson/restructuredtext-lint
   license: Unlicense
-  license_family: Public Domain
   license_file: UNLICENSE
   summary: 'Lint reStructuredText files'
   dev_url: https://github.com/twolfson/restructuredtext-lint
