@@ -1,6 +1,6 @@
 {% set name = "restructuredtext_lint" %}
-{% set version = "0.17.2" %}
-{% set sha256 = "1ab9316c3426016e3b4c4b590fe5e536e17de215bd2980dc6c931fed13afc738" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "e29dae3888168ff3813d34f554376fe4c58b6be2200dc1ced9cfea0e687b8b78" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
 
   run:
     - python
-    - docutils
+    - docutils >=0.11,<1.0
 
 test:
   imports:
@@ -32,6 +32,7 @@ about:
   home: https://github.com/twolfson/restructuredtext-lint
   license: Unlicense
   license_file: UNLICENSE
+  license_family: Public-Domain
   summary: 'Lint reStructuredText files'
   dev_url: https://github.com/twolfson/restructuredtext-lint
 
