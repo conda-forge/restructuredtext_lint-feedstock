@@ -1,6 +1,6 @@
 {% set name = "restructuredtext_lint" %}
-{% set version = "1.1.3" %}
-{% set sha256 = "c48ca9a84c312b262809f041fe47dcfaedc9ee4879b3e1f9532f745c182b4037" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "8712f9066d2c748002ec24f6f7ddca13e0c37654ae4f1ba0dcf0e78ba453c387" %}
 
 package:
   name: {{ name|lower }}
