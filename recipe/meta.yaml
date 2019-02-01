@@ -31,6 +31,9 @@ requirements:
 test:
   imports:
     - restructuredtext_lint
+  commands:
+    - rst-lint -h
+    - restructuredtext-lint -h
 
 about:
   home: https://github.com/twolfson/restructuredtext-lint
