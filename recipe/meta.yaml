@@ -14,7 +14,10 @@ source:
 build:
     noarch: python
     script: python setup.py install --single-version-externally-managed --record record.txt
-    number: 0
+    number: 1
+    entry_points:
+        - rst-lint = restructuredtext_lint.cli:main
+        - restructuredtext-lint = restructuredtext_lint.cli:main
 
 requirements:
   build:
@@ -28,6 +31,9 @@ requirements:
 test:
   imports:
     - restructuredtext_lint
+  commands:
+    - rst-lint -h
+    - restructuredtext-lint -h
 
 about:
   home: https://github.com/twolfson/restructuredtext-lint
