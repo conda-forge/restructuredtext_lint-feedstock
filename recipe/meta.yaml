@@ -13,7 +13,7 @@ source:
 
 build:
     noarch: python
-    script: python setup.py install --single-version-externally-managed --record record.txt
+    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     number: 0
     entry_points:
         - rst-lint = restructuredtext_lint.cli:main
@@ -22,6 +22,7 @@ build:
 requirements:
   build:
     - python
+    - pip
     - setuptools
 
   run:
