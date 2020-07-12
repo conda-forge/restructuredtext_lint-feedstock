@@ -1,23 +1,23 @@
 {% set name = "restructuredtext_lint" %}
-{% set version = "1.3.0" %}
-{% set sha256 = "97b3da356d5b3a8514d8f1f9098febd8b41463bed6a1d9f126cf0a048b6fd908" %}
+{% set version = "1.3.1" %}
+{% set sha256 = "470e53b64817211a42805c3a104d2216f6f5834b22fe7adb637d1de4d6501fb8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{name}}-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/{{name[0]}}/{{name}}/{{name}}-{{version}}.tar.gz
-  sha256: {{sha256}}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    noarch: python
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-    number: 0
-    entry_points:
-        - rst-lint = restructuredtext_lint.cli:main
-        - restructuredtext-lint = restructuredtext_lint.cli:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  entry_points:
+    - rst-lint = restructuredtext_lint.cli:main
+    - restructuredtext-lint = restructuredtext_lint.cli:main
 
 requirements:
   build:
@@ -41,7 +41,7 @@ about:
   license: Unlicense
   license_file: UNLICENSE
   license_family: Public-Domain
-  summary: 'Lint reStructuredText files'
+  summary: Lint reStructuredText files
   dev_url: https://github.com/twolfson/restructuredtext-lint
 
 extra:
