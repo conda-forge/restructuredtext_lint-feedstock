@@ -5,11 +5,11 @@ Home: https://github.com/twolfson/restructuredtext-lint
 
 Package license: Unlicense
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/restructuredtext_lint-feedstock/blob/master/LICENSE.txt)
 
 Summary: Lint reStructuredText files
 
-
+Development: https://github.com/twolfson/restructuredtext-lint
 
 Current build status
 ====================
