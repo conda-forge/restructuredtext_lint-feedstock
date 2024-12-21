@@ -8,28 +8,30 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
   entry_points:
     - rst-lint = restructuredtext_lint.cli:main
     - restructuredtext-lint = restructuredtext_lint.cli:main
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - docutils >=0.11,<1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - restructuredtext_lint
   commands:
