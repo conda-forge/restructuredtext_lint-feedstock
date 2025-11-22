@@ -1,6 +1,6 @@
 {% set name = "restructuredtext_lint" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "1b235c0c922341ab6c530390892eb9e92f90b9b75046063e047cacfb0f050c45" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "0d0d6a6766eb38e25abec7655b4a7806ce9441d5365a68e656cbb691527e6a45" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 1
+  number: 0
   entry_points:
     - rst-lint = restructuredtext_lint.cli:main
     - restructuredtext-lint = restructuredtext_lint.cli:main
